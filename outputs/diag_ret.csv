@@ -1,0 +1,4 @@
+group,total_rows,valid_return_weeks,invalid_return_weeks,bridge_weeks,flat_weeks,big_jump_weeks,trimmed_weeks,median_n_adj,max_abs_ret_w
+high,110,105,5,1,4,0,105,269.0,0.05056771625323213
+low,110,105,5,1,2,1,105,43.0,0.08230055872861436
+mid,110,105,5,1,1,0,105,316.0,0.07103617263266684
