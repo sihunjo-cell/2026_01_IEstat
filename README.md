@@ -329,7 +329,71 @@ Hypothesis 2는 지지되지 않았다. chip 기반 본모형, 제품구성 통�
 
 ---
 
-## 7. Main Takeaways
+## 7. Hypothesis 3: Effect on GPU/CPU/RAM price variation by BTC price variation
+
+### 7.1 Hypothesis
+> 비트코인 가격 변동의 영향을 받는 변동폭의 크기는 GPU가 CPU 및 RAM보다 크다.
+- 제본스 지수를 로그 차분하면(ln(I_t)-ln(I_{t-1})), 그것이 곧 해당 부품군의 시장 전체 평균 로그 수익률(Market Return)이 됨
+  → 비트코인의 로그 수익률과 동일한 '변동률' 스케일을 갖게 되므로, 금융 시계열 분석 기법을 1:1로 정확하게 매칭하여 적용
+  → 개별 제품의 특성(Random Effect)이 이미 제본스 지수 안에 완벽하게 통제 및 병합되어 있음
+
+### 7.2 Methodology
+
+1단계. ANOVA) 절댓값 수익률(Absolute Return)을 사용하여 부품군별 가격 변동성(Volatility) 크기 자체를 비교하도록 구성
+2단계. Mixed Linear Effect Model) 환율과 엔비디아 지표를 통제 변수로 포함했음
+
+### 7.3 Mixed Linear Model Regression 
+
+Mixed Linear Model Regression Results
+==========================================================================================
+Model:                        MixedLM            Dependent Variable:            Log_Return
+No. Observations:             315                Method:                        REML      
+No. Groups:                   105                Scale:                         0.0002    
+Min. group size:              3                  Log-Likelihood:                842.9409  
+Max. group size:              3                  Converged:                     Yes       
+Mean group size:              3.0                                                         
+------------------------------------------------------------------------------------------
+                                                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                       -0.000    0.002 -0.221 0.825 -0.003  0.003
+C(Category, Treatment('CPU'))[T.GPU]             0.002    0.002  0.802 0.423 -0.002  0.006
+C(Category, Treatment('CPU'))[T.RAM]             0.008    0.002  4.174 0.000  0.004  0.012
+BTC_Return                                      -0.002    0.026 -0.062 0.951 -0.052  0.049
+BTC_Return:C(Category, Treatment('CPU'))[T.GPU] -0.040    0.034 -1.189 0.235 -0.106  0.026
+BTC_Return:C(Category, Treatment('CPU'))[T.RAM] -0.044    0.034 -1.300 0.194 -0.110  0.022
+FX_Return                                       -0.040    0.087 -0.454 0.650 -0.210  0.131
+NVDA_Return                                      0.014    0.016  0.898 0.369 -0.017  0.045
+Group Var                                        0.000    0.001                           
+==========================================================================================
+
+### 7.4 Results
+
+(0) 1단계 ANOVA 검정 - F-통계량: 5.4405, p-value: 4.7588e-03
+- 부품군 간 절대적인 변동폭(민감도)은 달랐는데, 이는 RAM은 삼성/SK하이닉스의 감산이나 반도체 슈퍼사이클에 따라 가격이 요동치는 품목이고, GPU 역시 세대교체나 AI 수요에 따라 가격이 뛰는 등, 각 부품은 "자기들만의 이유로" 가격이 변동함
+
+(1) 부품군별 기본 수익률 차이 (비트코인 무관)
+| Core Parameter | Result value | Interpretation |
+|---|---:|---|
+| C(Category)[T.GPU] | param=0.002, p=0.423 | 비트코인과 무관하게, GPU의 기본 가격 변동률은 CPU와 통계적인 차이가 없음 |
+| C(Category)[T.RAM] | param=0.008, p=0.000 | RAM은 CPU에 비해 기본 가격 상승률이 유의미하게 더 높았음[1] |
+  [1] 특정 기간 메모리 반도체의 가격 상승 사이클이 반영된 것으로 보임
+(2) 비트코인 변동이 미치는 영향 (가설 3의 핵심)
+| Core Parameter | Result value | Interpretation |
+|---|---:|---|
+| BTC_Return | param=-0.002, p=0.951 | 비트코인 변동이 기준 그룹인 CPU 가격에 미치는 영향이 전혀 없었음 |
+| BTC_Return:C(Category)[T.GPU] | param=-0.040, p=0.235 | 유의수준(0.05)을 크게 상회하여 GPU가 비트코인 변동에 더 민감하지 않다는 통계적인 근거가 됨 |
+| BTC_Return:C(Category)[T.RAM] | param=-0.044, p=0.194 | RAM 역시 비트코인 변동에 대해 CPU와 유의미한 반응도 차이가 없음 |
+
+(3) 통제 변수 (환율 및 AI 수요)
+FX_Return (p=0.650), NVDA_Return (p=0.369): 주간(Weekly) 단위에서는 환율 변동이나 엔비디아 주가 변동이 하드웨어 소매 가격에 즉각적인 영향을 미치지 않는 것으로 나타났습니다. (유통사들이 재고와 환율 헷징을 통해 단기 충격을 흡수하기 때문입니다.)
+
+### 7.5 Conclusion
+가설3은 통계적으로 기각되었음 (=GPU가 비트코인에 더 민감하게 반응한다는 증거를 찾지 못했음)
+> 현재 IT 하드웨어 시장의 현실을 너무나도 정확하고 완벽하게 반영한 결과로 해석됨
+
+---
+
+## 8. Main Takeaways
 
 1. 제품 단위 원시 가격은 제품구성 변화에 따른 왜곡을 줄이기 위해 chain matched weekly index로 변환하였다.
 2. 비정상 가격 수준에서 발생할 수 있는 허위상관을 피하기 위해 주간 로그수익률을 사용하였다.
