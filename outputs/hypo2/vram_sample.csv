@@ -1,0 +1,4 @@
+h2_perf_group,product_n,median_vram_gb,min_vram_gb,max_vram_gb
+high,1144,16.0,12.0,32.0
+mid,666,8.0,8.0,11.0
+low,169,4.0,2.0,6.0

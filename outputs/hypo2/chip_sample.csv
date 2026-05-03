@@ -1,0 +1,4 @@
+chip_perf_group,product_n,median_vram_gb,min_vram_gb,max_vram_gb
+high,895,16.0,8.0,32.0
+mid,928,8.0,6.0,16.0
+low,156,4.0,2.0,8.0

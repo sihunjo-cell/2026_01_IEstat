@@ -1,0 +1,4 @@
+block,test,F_stat,p_value,df_num,df_denom
+product_FE,product_FE_high_vs_low_BTC_lags_joint_zero,0.373412993046999,0.9451841429457039,9.0,96.0
+product_FE,product_FE_mid_vs_low_BTC_lags_joint_zero,0.8606908958565369,0.5629091300554055,9.0,96.0
+product_FE,product_FE_all_group_BTC_interactions_joint_zero,1.0512772147687695,0.4126316834708343,18.0,96.0

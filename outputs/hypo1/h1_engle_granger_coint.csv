@@ -1,0 +1,2 @@
+test,stat,p_value,crit_1pct,crit_5pct,crit_10pct
+Engle-Granger cointegration: log GPU index ~ log BTC-KRW,-2.355300176012465,0.3463071693220806,-4.002743702385191,-3.3943796974012104,-3.0847033997864006

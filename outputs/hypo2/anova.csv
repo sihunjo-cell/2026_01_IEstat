@@ -1,0 +1,7 @@
+block,test,stat,p_value,note
+chip_main,Levene_median,0.390141507178308,0.6772908616272704,H0: equal variances
+chip_main,One_way_ANOVA,0.4848141812111115,0.6162747515006894,H0: equal group means
+chip_main,Welch_ANOVA,0.4771513780711605,0.6212263581825564,"H0: equal group means, unequal variance allowed"
+vram_proxy,Levene_median,5.682713042597164,0.003766323394269267,H0: equal variances
+vram_proxy,One_way_ANOVA,0.25420381707244355,0.7756941851662693,H0: equal group means
+vram_proxy,Welch_ANOVA,0.33436802412689653,0.7162799864431444,"H0: equal group means, unequal variance allowed"

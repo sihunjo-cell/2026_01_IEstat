@@ -1,0 +1,14 @@
+block,variable,VIF
+chip_lag_full,const,1.0767251406651124
+chip_lag_full,btc_krw_ret_l0,1.4072854917164632
+chip_lag_full,btc_krw_ret_l1,1.3951284489234654
+chip_lag_full,btc_krw_ret_l2,1.4370859841435826
+chip_lag_full,btc_krw_ret_l3,1.3862723297221753
+chip_lag_full,btc_krw_ret_l4,1.4196511505983187
+chip_lag_full,btc_krw_ret_l5,1.272915475201076
+chip_lag_full,btc_krw_ret_l6,1.2601183655900958
+chip_lag_full,btc_krw_ret_l7,1.2758118984309297
+chip_lag_full,btc_krw_ret_l8,1.2145939475563663
+chip_lag_full,fx_ret,1.0897369292959775
+chip_lag_full,nvda_ret,1.2461927569481634
+chip_lag_full,gpu_ret_l1,1.2144490678661357

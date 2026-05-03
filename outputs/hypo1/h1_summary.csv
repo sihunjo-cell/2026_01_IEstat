@@ -1,0 +1,10 @@
+block,main_result,value,detail
+lag_correlation,max_abs_corr_lag_week,0.0,-0.22162283475375663
+partial_correlation,max_abs_partial_corr_lag_week,2.0,0.18553896495999903
+distributed_lag_regression,btc_lags_joint_p_value,0.1016836189807795,H0: btc_krw_ret_l0 ... btc_krw_ret_l8 are all zero
+multicollinearity,max_core_vif,1.2369762032345664,"VIF among btc_krw_ret_l0, fx_ret, nvda_ret, gpu_ret_l1"
+var_granger,btc_to_gpu_p_value_with_controls,0.1114253958341155,VAR selected lag = 1; FX and NVDA included; predictive precedence only
+cointegration,engle_granger_p_value,0.3463071693220806,log GPU index and log BTC-KRW
+ecm,selected_btc_lag_by_aic,0.0,"BIC selected lag = 0; ECM includes ec_l1, d_log_usdkrw, d_log_nvda"
+etc_eda,btc_etc_return_corr,0.7456517472400969,"ETC-KRW is used only as GPU-mining-domain EDA, not main regressor"
+etc_eda,max_abs_corr_gpu_etc_lag_week,0.0,-0.19263594815682245

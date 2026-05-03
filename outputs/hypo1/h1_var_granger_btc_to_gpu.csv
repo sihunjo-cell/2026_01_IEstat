@@ -1,0 +1,2 @@
+selected_lag,test,statistic,p_value,df,interpretation_limit
+1,"VAR Granger causality: BTC-KRW return -> GPU return | FX, NVDA included",2.5452318295535474,0.1114253958341155,"(1, 396)",predictive precedence only; not structural/economic causality

@@ -1,0 +1,4 @@
+metric,value,interpretation
+corr_btc_etc_return,0.7456517472400969,BTC-KRW와 ETC-KRW가 같은 crypto sentiment를 공유하는지 확인
+max_abs_corr_gpu_etc_lag_week,0.0,GPU return과 ETC-KRW lag return의 절대상관이 가장 큰 시차
+max_abs_corr_gpu_etc_value,-0.19263594815682245,해당 시차에서의 GPU-ETC 단순 상관계수

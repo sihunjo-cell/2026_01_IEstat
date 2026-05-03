@@ -1,0 +1,7 @@
+block,test,F_stat,p_value,df_num,df_denom
+chip_main,high_vs_low_BTC_lags_joint_zero,0.4558548414666319,0.9004261419242868,9.0,96.0
+chip_main,mid_vs_low_BTC_lags_joint_zero,1.0148401961520959,0.4338148142183164,9.0,96.0
+chip_main,all_group_BTC_interactions_joint_zero,0.881208535369562,0.601759347381772,18.0,96.0
+vram_proxy,high_vs_low_BTC_lags_joint_zero,0.9757010017959485,0.4650434869058441,9.0,96.0
+vram_proxy,mid_vs_low_BTC_lags_joint_zero,2.4815971988193217,0.013604172434675052,9.0,96.0
+vram_proxy,all_group_BTC_interactions_joint_zero,1.6514424283055655,0.06248932635035971,18.0,96.0
