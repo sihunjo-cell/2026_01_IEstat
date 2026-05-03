@@ -344,27 +344,8 @@ Hypothesis 2는 지지되지 않았다. chip 기반 본모형, 제품구성 통�
 
 ### 7.3 Mixed Linear Model Regression 
 
-Mixed Linear Model Regression Results
-==========================================================================================
-Model:                        MixedLM            Dependent Variable:            Log_Return
-No. Observations:             315                Method:                        REML      
-No. Groups:                   105                Scale:                         0.0002    
-Min. group size:              3                  Log-Likelihood:                842.9409  
-Max. group size:              3                  Converged:                     Yes       
-Mean group size:              3.0                                                         
-------------------------------------------------------------------------------------------
-                                                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
-------------------------------------------------------------------------------------------
-Intercept                                       -0.000    0.002 -0.221 0.825 -0.003  0.003
-C(Category, Treatment('CPU'))[T.GPU]             0.002    0.002  0.802 0.423 -0.002  0.006
-C(Category, Treatment('CPU'))[T.RAM]             0.008    0.002  4.174 0.000  0.004  0.012
-BTC_Return                                      -0.002    0.026 -0.062 0.951 -0.052  0.049
-BTC_Return:C(Category, Treatment('CPU'))[T.GPU] -0.040    0.034 -1.189 0.235 -0.106  0.026
-BTC_Return:C(Category, Treatment('CPU'))[T.RAM] -0.044    0.034 -1.300 0.194 -0.110  0.022
-FX_Return                                       -0.040    0.087 -0.454 0.650 -0.210  0.131
-NVDA_Return                                      0.014    0.016  0.898 0.369 -0.017  0.045
-Group Var                                        0.000    0.001                           
-==========================================================================================
+<img width="608" height="420" alt="MLE model result" src="https://github.com/user-attachments/assets/ab6ea841-bdf0-40fd-8e96-a881790fb7bf" />
+
 
 ### 7.4 Results
 
