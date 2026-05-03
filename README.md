@@ -65,23 +65,27 @@ VRAM은 실제 성능과 완전히 일치하지 않는다. 예를 들어 RTX 306
 
 단순 평균 가격은 매주 관측되는 제품 구성이 달라질 때 왜곡된다. 따라서 인접한 두 주에 모두 가격이 관측된 동일 제품만 매칭하여 가격 변화를 계산하였다.
 
-그룹과 \(g\) 주에대해 \(t\),  \(M_{g,t}\)는 \(t-1\)과 \(t\)에 동시에 관측된 product의 집합이다. 그룹의 수익률(가격변동성)은
+그룹 \(g\)의 \(t\)주에 대해 \(M_{g,t}\)는 \(t-1\)주와 \(t\)주에 동시에 관측된 product의 집합이다. 그룹의 수익률(가격변동성)은
 
 $$
+\begin{aligned}
 r_{g,t}
-=
+&=
 \frac{1}{|M_{g,t}|}
 \sum_{i \in M_{g,t}}
-\left(\log p_{i,t} - \log p_{i,t-1}\right).
+\left(\log p_{i,t} - \log p_{i,t-1}\right)
+\end{aligned}
 $$
 
 체인 인덱스는
 
 $$
+\begin{aligned}
 I_{g,t}
-=
+&=
 I_{g,t-1}\exp(r_{g,t}),
-\qquad I_{g,0}=100.
+\qquad I_{g,0}=100
+\end{aligned}
 $$
 
 이 방식은 “이번 주에 어떤 제품이 새로 들어왔는가”가 아니라 “같은 제품의 가격이 얼마나 변했는가”를 추적한다. 따라서 제품 구성 변화에 의한 대표가격 왜곡을 줄인다.
@@ -151,8 +155,9 @@ BTC 효과가 즉시 반영되지 않을 수 있으므로 lag 0~8주의 BTC 수�
 주요 회귀식은 다음과 같다.
 
 $$
+\begin{aligned}
 r^{GPU}_t
-=
+&=
 \alpha
 +
 \sum_{k=0}^{8}\beta_k r^{BTC}_{t-k}
@@ -163,13 +168,14 @@ r^{GPU}_t
 +
 \rho r^{GPU}_{t-1}
 +
-\epsilon_t.
+\epsilon_t
+\end{aligned}
 $$
 
 핵심 공동 검정은 다음과 같다.
 
 $$
-H_0: \beta_0=\beta_1=\cdots=\beta_8=0.
+H_0:\ \beta_0=\beta_1=\cdots=\beta_8=0
 $$
 
 개별 시차 계수의 p-value보다 BTC 시차 구조 전체의 공동 유의성을 핵심 판단 기준으로 사용하였다. 표준오차는 시계열 자기상관과 이분산 가능성을 고려해 HAC/Newey-West 방식으로 보정하였다.
@@ -179,8 +185,9 @@ $$
 가격 수준 변수의 장기 관계는 ADF 단위근 검정과 Engle-Granger 공적분 검정으로 확인하였다. 공적분 가능성이 있을 경우 ECM을 사용하였다.
 
 $$
+\begin{aligned}
 \Delta y_t
-=
+&=
 \alpha
 +
 \lambda u_{t-1}
@@ -191,13 +198,14 @@ $$
 +
 \gamma_2 \Delta nvda_t
 +
-\epsilon_t,
+\epsilon_t
+\end{aligned}
 $$
 
 여기서
 
 $$
-u_{t-1}=y_{t-1}-\hat{a}-\hat{b}b_{t-1}.
+u_{t-1}=y_{t-1}-\hat{a}-\hat{b}b_{t-1}
 $$
 
 ### 5.4 Results
@@ -232,7 +240,7 @@ Hypothesis 1은 강하게 지지되지 않았다. 일부 시차별 신호는 존
 ANOVA는 성능군별 평균 수익률이 다른지 확인하는 탐색적 검정으로만 사용하였다.
 
 $$
-H_0: \mu_{high}=\mu_{mid}=\mu_{low}.
+H_0:\ \mu_{high}=\mu_{mid}=\mu_{low}
 $$
 
 Levene 검정으로 등분산성을 먼저 확인하였다. 등분산 가정이 약할 수 있으므로, 분산이 달라도 사용할 수 있는 Welch ANOVA도 함께 수행하였다.
@@ -242,39 +250,46 @@ Levene 검정으로 등분산성을 먼저 확인하였다. 등분산 가정이 
 ANOVA는 BTC 민감도가 성능군별로 다른지를 직접 검정하지 못한다. 따라서 본검정은 상호작용 회귀모형으로 수행하였다.
 
 $$
+\begin{aligned}
 r_{g,t}
-=
+&=
 \alpha_g
 +
-\sum_{k=0}^{8}\beta_k r^{BTC}_{t-k}
-+
+\sum_{k=0}^{8}\beta_k r^{BTC}_{t-k} \\
+&\quad+
 \sum_{k=0}^{8}\delta_{high,k}
-\left(r^{BTC}_{t-k}\times D^{high}_g\right)
-+
+\left(r^{BTC}_{t-k}\times D^{high}_g\right) \\
+&\quad+
 \sum_{k=0}^{8}\delta_{mid,k}
 \left(r^{BTC}_{t-k}\times D^{mid}_g\right)
 +
 \Gamma Controls_{g,t}
 +
-\epsilon_{g,t}.
+\epsilon_{g,t}
+\end{aligned}
 $$
 
 핵심 검정은 다음과 같다.
 
 $$
-H_0: \delta_{high,0}=\cdots=\delta_{high,8}=0
+H_0:\ \delta_{high,0}=\delta_{high,1}=\cdots=\delta_{high,8}=0
 $$
 
 그리고
 
 $$
-H_0: \delta_{mid,0}=\cdots=\delta_{mid,8}=0.
+H_0:\ \delta_{mid,0}=\delta_{mid,1}=\cdots=\delta_{mid,8}=0
 $$
 
 그룹 \(g\)의 BTC 누적 효과는 다음과 같이 계산하였다.
 
 $$
-C_g=\sum_{k=0}^{8}\left(\beta_k+\delta_{g,k}\right).
+\begin{aligned}
+C_g
+&=
+\sum_{k=0}^{8}
+\left(\beta_k+\delta_{g,k}\right)
+\end{aligned}
 $$
 
 개별 시차 계수보다 interaction 항의 공동 유의성 검정과 누적 효과를 핵심 판단 기준으로 사용하였다.
