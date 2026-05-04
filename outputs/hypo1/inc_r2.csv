@@ -1,0 +1,5 @@
+comparison,delta_r2,interpretation
+add_gpu_l1_after_controls,0.5047037205013103,incremental explanatory power of GPU return persistence
+add_btc_lags_after_controls,0.08987012441707065,incremental explanatory power of BTC lag structure before GPU lag
+add_btc_lags_after_controls_and_gpu_l1,0.048586546106397344,BTC incremental explanatory power in the main specification
+add_gpu_l1_after_controls_and_btc_lags,0.463420142190637,GPU persistence contribution after BTC lags

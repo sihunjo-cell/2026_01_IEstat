@@ -1,0 +1,7 @@
+block,group,raw_rows,gpu_ret_nonnull,btc_lag0_nonnull,btc_lag8_nonnull,gpu_ret_l1_nonnull,complete_reg_rows,dropped_rows,ffill_used
+chip_main,high,105,105,105,97,104,97,8,False
+chip_main,low,105,105,105,97,104,97,8,False
+chip_main,mid,105,105,105,97,104,97,8,False
+vram_proxy,high,105,105,105,97,104,97,8,False
+vram_proxy,low,105,105,105,97,104,97,8,False
+vram_proxy,mid,105,105,105,97,104,97,8,False

@@ -1,0 +1,5 @@
+block,test,F_stat,p_value,df_num,df_denom
+chip_main_no_trim,high_vs_mid_BTC_lags_joint_zero,0.3996249498433738,0.9324456013619266,9.0,96.0
+chip_main_no_trim,low_vs_mid_BTC_lags_joint_zero,0.7031427297546077,0.7045825687671313,9.0,96.0
+chip_main_no_trim,high_vs_low_BTC_lags_joint_zero,0.41950687305131606,0.9218375568955547,9.0,96.0
+chip_main_no_trim,all_group_BTC_interactions_joint_zero,0.6336312533150442,0.8646531567621915,18.0,96.0

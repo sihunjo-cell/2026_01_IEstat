@@ -1,0 +1,2 @@
+model,controls,F_stat,p_value,df_num,df_denom,n
+extended_market_controls,"FX, NVDA, NASDAQ, SOX, GPU lag 1",2.2395214698220696,0.02736725364696757,9.0,81.0,96

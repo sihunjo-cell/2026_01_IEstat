@@ -1,0 +1,20 @@
+block,main_result,value,detail
+lag_correlation,max_abs_corr_lag_week,0.0,-0.22162283475375663
+ccf_lag_correlation,approx_95_conf_band,0.19900784836618934,CCF-style lag plot; descriptive EDA only
+partial_correlation,max_abs_partial_corr_lag_week,2.0,0.1855389835379295
+distributed_lag_regression,btc_lags_joint_p_value,0.10168366629042806,H0: btc_krw_ret_l0 ... btc_krw_ret_l8 are all zero
+lag_missingness,complete_regression_weeks_all_lags,96.0,No forward fill; complete-case regression after lag construction
+rolling_eda,max_abs_rolling_corr_24w,0.3842321623474331,24-week rolling correlation added to reduce low-degree-of-freedom noise
+regime_eda,regime_corr_beta_rows,4.0,early/late and BTC-volatility regime EDA; not confirmatory evidence
+volatility_clustering,ljungbox_sq_resid_p_lag8,1.8797434422587163e-11,Ljung-Box p-value on squared residuals
+residual_distribution,jarque_bera_p_value,8.959900834348778e-69,Fat-tail/non-normality diagnostic for OLS residuals
+incremental_r2,btc_lags_after_controls_and_gpu_l1_delta_r2,0.048586546106397344,Checks whether model fit is driven mainly by BTC lags or GPU persistence
+no_trim_robustness,btc_lags_joint_p_value_no_trim,0.052945718507534614,"Robustness using ret_all_notrim_w: no quantile trim, hard error filter kept"
+extended_market_controls,btc_lags_joint_p_value_with_nasdaq_sox,0.02736725364696757,"Robustness only: FX, NVDA, NASDAQ, SOX, GPU lag included"
+residual_visual_diagnostic,max_abs_standardized_residual,4.573712059525401,Residual time plot and Q-Q plot saved/printed for regime-misspecification check
+multicollinearity,max_core_vif,1.2369762063457377,"VIF among btc_krw_ret_l0, fx_ret, nvda_ret, gpu_ret_l1"
+var_granger,btc_to_gpu_p_value_with_controls,0.11142539537406984,VAR selected lag = 1; FX and NVDA included; predictive precedence only
+cointegration,engle_granger_p_value,0.3463071693220806,log GPU index and log BTC-KRW
+ecm,selected_btc_lag_by_aic,0.0,"BIC selected lag = 0; ECM includes ec_l1, d_log_usdkrw, d_log_nvda"
+etc_eda,btc_etc_return_corr,0.7456517472400969,"ETC-KRW is used only as GPU-mining-domain EDA, not main regressor"
+etc_eda,max_abs_corr_gpu_etc_lag_week,0.0,-0.19263594815682245

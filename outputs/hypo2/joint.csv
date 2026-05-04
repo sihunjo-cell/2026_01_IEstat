@@ -1,7 +1,9 @@
 block,test,F_stat,p_value,df_num,df_denom
-chip_main,high_vs_low_BTC_lags_joint_zero,0.4558548414666319,0.9004261419242868,9.0,96.0
-chip_main,mid_vs_low_BTC_lags_joint_zero,1.0148401961520959,0.4338148142183164,9.0,96.0
-chip_main,all_group_BTC_interactions_joint_zero,0.881208535369562,0.601759347381772,18.0,96.0
-vram_proxy,high_vs_low_BTC_lags_joint_zero,0.9757010017959485,0.4650434869058441,9.0,96.0
-vram_proxy,mid_vs_low_BTC_lags_joint_zero,2.4815971988193217,0.013604172434675052,9.0,96.0
-vram_proxy,all_group_BTC_interactions_joint_zero,1.6514424283055655,0.06248932635035971,18.0,96.0
+chip_main,high_vs_mid_BTC_lags_joint_zero,0.6553282460133758,0.7469435132504505,9.0,96.0
+chip_main,low_vs_mid_BTC_lags_joint_zero,1.0148402325577242,0.4338147857383556,9.0,96.0
+chip_main,high_vs_low_BTC_lags_joint_zero,0.45585482446349634,0.9004261525270945,9.0,96.0
+chip_main,all_group_BTC_interactions_joint_zero,0.8812083961423244,0.6017595094334867,18.0,96.0
+vram_proxy,high_vs_mid_BTC_lags_joint_zero,0.6264579405209928,0.7718832348693943,9.0,96.0
+vram_proxy,low_vs_mid_BTC_lags_joint_zero,2.481597248320261,0.013604170655367518,9.0,96.0
+vram_proxy,high_vs_low_BTC_lags_joint_zero,0.9757009590849167,0.46504352163143203,9.0,96.0
+vram_proxy,all_group_BTC_interactions_joint_zero,1.6514423934409168,0.06248933426118426,18.0,96.0

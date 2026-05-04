@@ -1,0 +1,2 @@
+block,hypothesis,F_stat,p_value,df_num,df_denom,n
+no_trim,btc_krw_ret_l0 ~ btc_krw_ret_l8 jointly zero,1.9714910697792973,0.052945718507534614,9.0,83.0,96

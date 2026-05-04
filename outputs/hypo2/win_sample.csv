@@ -1,2 +1,2 @@
-block,obs_n,week_n,group_n,lag_window_n
-chip_main_lag_window,291,97,3,4
+block,obs_n,week_n,group_n,base_group,lag_window_n
+chip_main_lag_window,291,97,3,mid,4
