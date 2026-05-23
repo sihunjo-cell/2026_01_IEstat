@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            CPU_ALL_ret   R-squared:                       0.174
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.9985
+Date:                Sat, 23 May 2026   Prob (F-statistic):              0.433
+Time:                        00:51:04   Log-Likelihood:                 68.409
+No. Observations:                  24   AIC:                            -126.8
+Df Residuals:                      19   BIC:                            -120.9
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.0024      0.003     -0.749      0.463      -0.009       0.004
+SOXX_ret_z     0.0042      0.004      1.146      0.266      -0.003       0.012
+CSI_diff_z     0.0031      0.004      0.842      0.410      -0.005       0.011
+Oil_ret_z      0.0017      0.003      0.512      0.614      -0.005       0.009
+BTC_ret_z     -0.0018      0.003     -0.536      0.598      -0.009       0.005
+==============================================================================
+Omnibus:                        0.234   Durbin-Watson:                   1.716
+Prob(Omnibus):                  0.890   Jarque-Bera (JB):                0.030
+Skew:                          -0.075   Prob(JB):                        0.985
+Kurtosis:                       2.913   Cond. No.                         1.64
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

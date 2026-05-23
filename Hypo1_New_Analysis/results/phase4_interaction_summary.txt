@@ -1,0 +1,38 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Price_Return   R-squared:                       0.215
+Model:                            OLS   Adj. R-squared:                  0.022
+Method:                 Least Squares   F-statistic:                     1.115
+Date:                Sat, 23 May 2026   Prob (F-statistic):              0.366
+Time:                        00:51:04   Log-Likelihood:                 115.92
+No. Observations:                  72   AIC:                            -201.8
+Df Residuals:                      57   BIC:                            -167.7
+Df Model:                          14                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                           -0.0024      0.011     -0.217      0.829      -0.025       0.020
+C(Component, Treatment('CPU'))[T.GPU]                0.0076      0.016      0.482      0.632      -0.024       0.039
+C(Component, Treatment('CPU'))[T.RAM]                0.0390      0.016      2.485      0.016       0.008       0.070
+SOXX_ret_z                                           0.0042      0.013      0.332      0.741      -0.021       0.029
+SOXX_ret_z:C(Component, Treatment('CPU'))[T.GPU]    -0.0012      0.018     -0.067      0.947      -0.037       0.034
+SOXX_ret_z:C(Component, Treatment('CPU'))[T.RAM]     0.0112      0.018      0.628      0.532      -0.024       0.047
+CSI_diff_z                                           0.0031      0.013      0.244      0.808      -0.022       0.029
+CSI_diff_z:C(Component, Treatment('CPU'))[T.GPU]     0.0005      0.018      0.030      0.976      -0.035       0.037
+CSI_diff_z:C(Component, Treatment('CPU'))[T.RAM]    -0.0007      0.018     -0.036      0.971      -0.037       0.035
+Oil_ret_z                                            0.0017      0.012      0.148      0.883      -0.021       0.025
+Oil_ret_z:C(Component, Treatment('CPU'))[T.GPU]     -0.0012      0.016     -0.073      0.942      -0.034       0.032
+Oil_ret_z:C(Component, Treatment('CPU'))[T.RAM]     -0.0067      0.016     -0.410      0.683      -0.039       0.026
+BTC_ret_z                                           -0.0018      0.011     -0.155      0.877      -0.025       0.021
+BTC_ret_z:C(Component, Treatment('CPU'))[T.GPU]     -0.0094      0.016     -0.586      0.560      -0.042       0.023
+BTC_ret_z:C(Component, Treatment('CPU'))[T.RAM]     -0.0234      0.016     -1.454      0.151      -0.056       0.009
+==============================================================================
+Omnibus:                       70.259   Durbin-Watson:                   0.949
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              580.214
+Skew:                           2.831   Prob(JB):                    1.02e-126
+Kurtosis:                      15.703   Cond. No.                         6.11
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
