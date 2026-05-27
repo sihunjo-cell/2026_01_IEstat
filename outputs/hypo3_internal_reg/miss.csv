@@ -1,0 +1,19 @@
+var,na,na_pct,mech,method,reason
+gpu_ret,5,4.55,structural,drop,first/gap return unavailable
+gpu_n_chg,5,4.55,structural,drop,log-difference requires current and previous positive active count
+gpu_new_sh,5,4.55,structural,drop,entry share requires previous positive active count; post-gap value is artifact
+gpu_riq_l1,7,6.36,structural,drop,lagged internal-volatility variable is undefined after first/gap week
+cpu_ret,5,4.55,structural,drop,first/gap return unavailable
+cpu_n_chg,5,4.55,structural,drop,log-difference requires current and previous positive active count
+cpu_new_sh,5,4.55,structural,drop,entry share requires previous positive active count; post-gap value is artifact
+cpu_riq_l1,7,6.36,structural,drop,lagged internal-volatility variable is undefined after first/gap week
+ram_ret,5,4.55,structural,drop,first/gap return unavailable
+ram_n_chg,5,4.55,structural,drop,log-difference requires current and previous positive active count
+ram_new_sh,5,4.55,structural,drop,entry share requires previous positive active count; post-gap value is artifact
+ram_riq_l1,7,6.36,structural,drop,lagged internal-volatility variable is undefined after first/gap week
+gpu_high_chg,5,4.55,structural,drop,first-difference requires current and previous valid mix share
+gpu_vram_chg,5,4.55,structural,drop,first-difference requires current and previous valid mix share
+cpu_amd_chg,5,4.55,structural,drop,first-difference requires current and previous valid mix share
+ram_ddr5_chg,5,4.55,structural,drop,first-difference requires current and previous valid mix share
+ram_cap_chg,5,4.55,structural,drop,first-difference requires current and previous valid mix share
+final_rows,7,6.36,structural_complete_case,drop,kept 103 of 110 weeks after structural-cleaning
