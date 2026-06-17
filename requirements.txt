@@ -1,0 +1,9 @@
+# 분석 재현 환경 (검증: 2026-06, Python 3.13)
+# statsmodels는 0.14.5+ 필수: 0.14.4는 scipy>=1.16에서 `_lazywhere` import 에러로 모든 노트북 실행 불가.
+pandas>=2.2
+numpy>=2.0
+scipy>=1.16
+statsmodels>=0.14.5
+yfinance>=1.0
+pandas_datareader>=0.10        # Hypo3_relation.ipynb의 FRED 한국 소비자심리(CSCICP02KRM066S) 로드에 필요
+matplotlib>=3.8

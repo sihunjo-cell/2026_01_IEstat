@@ -34,7 +34,7 @@ Danawa 제품별 가격 데이터
 | `soxx_ret_z` | SOXX ETF 수익률 | NVDA보다 넓은 AI·반도체 수요 proxy |
 | `fx_ret_z` | USD/KRW 수익률 | 한국 수입·소매가격의 환율 효과 |
 | `oil_ret_z` | Brent oil 수익률 | 원가·물류·인플레이션 proxy |
-| `csi_chg_z` | 소비자심리지수 변화 | 소비수요 환경 proxy |
+| `csi_chg_z` | 한국 소비자심리지수(OECD Composite Consumer Confidence for Korea, FRED `CSCICP02KRM066S`, 월간) 변화 | 소비수요 환경 proxy. 원자료가 월간이라 주간 변화는 월 1회만 반영되는 한계가 있다 |
 
 SOXX를 AI·반도체 수요 proxy로 도입했으므로, 최종 Hypo3에서는 **NVDA를 제외**했다. SOXX와 NVDA를 동시에 넣으면 동일한 반도체 수요 신호를 중복 통제하게 된다.
 
